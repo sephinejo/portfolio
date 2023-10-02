@@ -1,22 +1,18 @@
 /* Global */
 :root {
   /* App Colors */
-  --color-primary: var(--color-blue);
-  --color-primary-variant: var(--color-lightBlue);
-  --color-accent: var(--color-yellow);
-  --color-accent-variant: var(--color-beige);
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
 
   /* Colors */
   --color-white: #ffffff;
   --color-black: #050a13;
-  --color-darkBlue: #0d2840;
-  --color-blue: #1f6373;
-  --color-lightBlue: #379ba6;
-  --color-yellow: #f2d06b;
-  --color-brown: #bf8049;
-  --color-light-grey: #adaabf;
-  --color-grey: #262408;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
 }
 
 * {
@@ -82,6 +78,7 @@ button:focus {
 }
 
 .header__logo__title {
+  font-family: 'Young Serif';
   font-size: 1.5rem;
 }
 
@@ -100,4 +97,52 @@ button:focus {
 .header__menu__item.active {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
+}
+
+/* Home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 5rem 1rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+}
+
+.home__title {
+  font-family: 'Young Serif';
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home__title-strong {
+  color: var(--color-accent);
+}
+
+.home__description {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.home__contact {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  font-weight: bold;
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 2px solid var(--color-accent);
 }
