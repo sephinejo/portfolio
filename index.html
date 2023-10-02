@@ -31,14 +31,15 @@
   </head>
   <!-- JavaScript
    -->
-  <script src="src/main.js" defer></script>
+  <script type="module" src="src/main.js" defer></script>
+  <script type="module" src="src/projects.js" defer></script>
   <body>
     <header class="header">
       <div class="header__logo">
         <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
         <h1 class="header__logo__title"><a href="#">Soohyun</a></h1>
       </div>
-      <nav class='header__nav'>
+      <nav class="header__nav">
         <ul class="header__menu">
           <li><a class="header__menu__item active" href="#home">Home</a></li>
           <li><a class="header__menu__item" href="#about">About</a></li>
@@ -47,28 +48,28 @@
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class='header__toggle' aria-label='navigation menu toggle'>
+      <button class="header__toggle" aria-label="navigation menu toggle">
         <i class="fa-solid fa-bars"></i>
       </button>
     </header>
     <main>
       <!-- Home -->
       <section id="home">
-        <div class='home__container'>
+        <div class="home__container">
           <img
-          class="home__avatar"
-          src="images/profile-removebg.png"
-          alt="Soohyun's profile"
-          width="300px"
-        />
-        <h2 class="home__title">
-          Hello,<br />I&#39;m
-          <strong class="home__title-strong">Soohyun</strong>
-        </h2>
-        <p class="home__description">
-          A software engineer currently living in Los Angeles, California
-        </p>
-        <a class="home__contact" href="#contact">Contact Me</a>
+            class="home__avatar"
+            src="images/profile-removebg.png"
+            alt="Soohyun's profile"
+            width="300px"
+          />
+          <h2 class="home__title">
+            Hello,<br />I&#39;m
+            <strong class="home__title-strong">Soohyun</strong>
+          </h2>
+          <p class="home__description">
+            A software engineer currently living in Los Angeles, California
+          </p>
+          <a class="home__contact" href="#contact">Contact Me</a>
         </div>
       </section>
       <!-- About -->
@@ -204,39 +205,56 @@
           <h2 class="title">My works</h2>
           <div>
             <p class="description">Professional Works</p>
-            <ul class="categories">
+            <ul class="categories categories--works">
               <li>
-                <button class="category category--selected">
+                <button class="category category--selected" data-filter="all">
                   All <span class="category__count">2</span>
                 </button>
               </li>
+              <li>
+                <button class="category" data-filter="full-stack">
+                  Full-stack <span class="category__count">0</span>
+                </button>
+              </li>
+              <li>
+                <button class="category" data-filter="front-end">
+                  Front-end <span class="category__count">2</span>
+                </button>
+              </li>
+              <li>
+                <button class="category" data-filter="back-end">
+                  Back-end <span class="category__count">0</span>
+                </button>
+              </li>
             </ul>
-            <ul class='projects'>
-              <li class='project'>
+            <ul class="works">
+              <li class="work--project" data-type="front-end">
                 <a href="https://boxkor.com/" target="_blank">
                   <img
                     src="images/BoxkorLandingPage.png"
                     alt="Boxkor Landing Page"
                     width="400px"
-                    class='project__img'
+                    class="project__img"
                   />
                 </a>
-                <div class='project__metadata'>
-                  <h3 class='project__title'>Baram Boxkor<br />Landing Page</h3>
+                <div class="project__metadata">
+                  <h3 class="project__title">Baram Boxkor<br />Landing Page</h3>
                   <p></p>
                 </div>
               </li>
-              <li class='project'>
+              <li class="work--project" data-type="front-end">
                 <a href="https://staging.thebaram.com/" target="_blank">
                   <img
                     src="images/BoxkorECommerce.png"
                     alt="Boxkor E-Commerce Website"
                     width="400px"
-                    class='project__img'
+                    class="project__img"
                   />
                 </a>
-                <div class='project__metadata'>
-                  <h3 class='project__title'>Baram Boxkor<br />E-Commerce Website</h3>
+                <div class="project__metadata">
+                  <h3 class="project__title">
+                    Baram Boxkor<br />E-Commerce Website
+                  </h3>
                   <p></p>
                 </div>
               </li>
@@ -244,86 +262,86 @@
           </div>
           <div>
             <p class="description">Personal Projects</p>
-            <ul class="categories">
+            <ul class="categories categories--projects">
               <li>
-                <button class="category">
+                <button class="category project--selected" data-filter="all">
                   All <span class="category__count">6</span>
                 </button>
               </li>
               <li>
-                <button class="category category--selected">
+                <button class="category" data-filter="full-stack">
                   Full-stack <span class="category__count">1</span>
                 </button>
               </li>
               <li>
-                <button class="category">
+                <button class="category" data-filter="front-end">
                   Front-end <span class="category__count">3</span>
                 </button>
               </li>
               <li>
-                <button class="category">
+                <button class="category" data-filter="back-end">
                   Back-end <span class="category__count">2</span>
                 </button>
               </li>
             </ul>
-            <ul class='projects'>
-              <li class='project'>
+            <ul class="projects">
+              <li class="project--project" data-type="full-stack">
                 <a href="#" target="_blank">
-                  <img src="" alt="project1" class='project__img' />
-                  <div class='project__metadata'>
-                    <h3 class='project__title'>Project #1</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet 
-                    </p>
+                  <img src="" alt="project1" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #1</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
                   </div>
                 </a>
               </li>
-              <li class='project'><a href="#" target="_blank">
-                  <img src="" alt="project2" class='project__img' />
-                  <div class='project__metadata'>
-                    <h3 class='project__title'>Project #2</h3>
+              <li class="project--project" data-type="front-end">
+                <a href="#" target="_blank">
+                  <img src="" alt="project2" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #2</h3>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Hic, nisi?
                     </p>
                   </div>
-                </a></a></li>
-              <li class='project'><a href="#" target="_blank">
-                  <img src="" alt="project3" class='project__img' />
-                  <div class='project__metadata'>
-                    <h3 class='project__title'>Project #3</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet 
-                    </p>
+                </a>
+              </li>
+              <li class="project--project" data-type="back-end">
+                <a href="#" target="_blank">
+                  <img src="" alt="project3" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #3</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
                   </div>
-                </a></a></li>
-              <li class='project'><a href="#" target="_blank">
-                  <img src="" alt="project4" class='project__img' />
-                  <div class='project__metadata'>
-                    <h3 class='project__title'>Project #4</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet 
-                    </p>
+                </a>
+              </li>
+              <li class="project--project" data-type="front-end">
+                <a href="#" target="_blank">
+                  <img src="" alt="project4" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #4</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
                   </div>
-                </a></a></li>
-              <li class='project'><a href="#" target="_blank">
-                  <img src="" alt="project5" class='project__img' />
-                  <div class='project__metadata'>
-                    <h3 class='project__title'>Project #5</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet 
-                    </p>
+                </a>
+              </li>
+              <li class="project--project" data-type="back-end">
+                <a href="#" target="_blank">
+                  <img src="" alt="project5" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #5</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
                   </div>
-                </a></li>
-              <li class='project'><a href="#" target="_blank">
-                <img src="" alt="project6" class='project__img' />
-                <div class='project__metadata'>
-                  <h3 class='project__title'>Project #6</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet 
-                  </p>
-                </div>
-              </a></li>
+                </a>
+              </li>
+              <li class="project--project" data-type="front-end">
+                <a href="#" target="_blank">
+                  <img src="" alt="project6" class="project__img" />
+                  <div class="project__metadata">
+                    <h3 class="project__title">Project #6</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -332,36 +350,36 @@
       <section id="contact" class="section"></section>
       <!-- Arrow up -->
       <aside>
-        <a class='arrow-up' href="#home" title="back to top"
+        <a class="arrow-up" href="#home" title="back to top"
           ><i class="fa-solid fa-chevron-up"></i
         ></a>
       </aside>
     </main>
     <footer id="contact" class="section">
-      <div class='max-container'>
+      <div class="max-container">
         <h2 class="title">Let&#39;s talk</h2>
-      <p class="description">k.josephine19@gmail.com</p>
-      <ul class='contact__links'>
-        <li>
-          <a
-          class='contact__link'
-            href="https://github.com/sephinejo"
-            target="_blank"
-            title="my github link"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </li>
-        <li>
-          <a
-          class='contact__link'
-            href="https://www.linkedin.com/in/soo-hyun-kang/"
-            target="_blank"
-            title="my linkedin link"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
-      <p>&copy;Soohyun - All rights reserved</p>
+        <p class="description">k.josephine19@gmail.com</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/sephinejo"
+              target="_blank"
+              title="my github link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://www.linkedin.com/in/soo-hyun-kang/"
+              target="_blank"
+              title="my linkedin link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+        <p>&copy;Soohyun - All rights reserved</p>
       </div>
     </footer>
   </body>

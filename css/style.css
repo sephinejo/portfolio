@@ -198,7 +198,7 @@ button:focus {
   font-family: 'Lato', sans-serif;
   font-size: 1.3rem;
   font-weight: 300;
-  letter-spacing: 1.1px;
+  letter-spacing: 1px;
   line-height: 1.6;
 }
 
@@ -344,7 +344,8 @@ button:focus {
   white-space: nowrap;
 }
 
-.category--selected {
+.category--selected,
+.project--selected {
   background-color: var(--color-accent);
   color: var(--color-primary);
 }
@@ -369,14 +370,23 @@ button:focus {
   top: 0;
 }
 
+.works,
 .projects {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  transition: all 200ms ease-out;
 }
 
-.project {
+.works.anim-out,
+.projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+}
+
+.work--project,
+.project--project {
   position: relative;
   border-radius: 4px;
   overflow: hidden;
@@ -384,6 +394,8 @@ button:focus {
 
 .project__img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project__metadata {
@@ -521,6 +533,10 @@ button:focus {
     margin-bottom: 0.5rem;
   }
 
+  .description__about {
+    font-size: 1.1rem;
+  }
+
   .majors {
     flex-direction: column;
     align-items: center;
@@ -546,6 +562,7 @@ button:focus {
     width: 100%;
   }
 
+  .works,
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
