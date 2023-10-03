@@ -208,9 +208,10 @@ button:focus {
 
 .majors {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 8rem;
   margin: 2.5rem 0;
+  width: 100%;
 }
 
 .major {
@@ -545,6 +546,7 @@ button:focus {
   .majors {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .major {
