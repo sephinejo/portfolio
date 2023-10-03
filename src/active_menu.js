@@ -21,7 +21,7 @@ function observerCallback(entries) {
     selectLastOne =
       index === sectionIds.length - 1 &&
       entry.isIntersecting &&
-      entry.intersectionRatio >= 0.99;
+      entry.intersectionRatio >= 0.95;
 
     const navIndex = selectLastOne
       ? sectionIds.length - 1
