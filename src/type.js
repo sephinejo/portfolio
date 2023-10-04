@@ -5,9 +5,9 @@ new TypeIt('.home__title-strong', {
   loop: true,
 })
   .move(-7)
-  .type('Front-end Engineer  ')
-  .move(-11)
-  .delete(11)
+  .type('Front-end Engineer ')
+  .move(-10)
+  .delete(10)
   .type('Back-end ')
   .delete(9)
   .type('Full-stack')
